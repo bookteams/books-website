@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 /**
 * @ClassName: DbUtil
-* @Description: 连接数据库
+* @Description: 连接数据库工具类
 * @author 李勇超
 * @date 2018年11月9日下午4:15:38
 *
