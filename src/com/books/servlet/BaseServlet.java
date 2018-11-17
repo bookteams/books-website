@@ -32,6 +32,11 @@ public class BaseServlet extends HttpServlet {
 			String m=request.getParameter("method");
 			//System.out.println(m);
 			
+			if(m==null) {
+				m="index";
+			}
+			
+			
 			//3.获取方法对象
 			Method method=clazz.getMethod(m, HttpServletRequest.class,HttpServletResponse.class);
 			
@@ -46,13 +51,12 @@ public class BaseServlet extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
-		
-		
-		
-		super.service(request, response);
 	}
 	
+	public String index(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		return "null";
+	}
 	
-	
-
 }
+
+
