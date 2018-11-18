@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 
 /**
 * @ClassName: MD5Utils
-* @Description: MD5加密
+* @Description: MD5加密工具类
 * @author 李勇超
 * @date 2018年11月18日下午3:10:40
 *
