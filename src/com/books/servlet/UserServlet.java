@@ -23,7 +23,9 @@ public class UserServlet extends BaseServlet {
 	
 public String delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		
+	  	
+	 
+	
 		System.out.println("这是delete方法");
 		return null;
 
