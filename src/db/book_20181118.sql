@@ -11,7 +11,7 @@
  Target Server Version : 50022
  File Encoding         : 65001
 
- Date: 18/11/2018 15:05:51
+ Date: 18/11/2018 16:45:14
 */
 
 SET NAMES utf8mb4;
@@ -37,13 +37,13 @@ CREATE TABLE `book_attribute`  (
   `ba_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '图书名称',
   `ba_autor` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '图书作者',
   `bt_id` int(11) NOT NULL DEFAULT '' COMMENT '图书类型',
-  `ba_mprice` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '图书市场价',
   `ba_stock` int(11) NULL DEFAULT NULL COMMENT '库存量',
   `ba_isbn` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '图书书号\r\n',
   `ba_introduction` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '图书简介',
   `ba_picture` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '图书图片',
   `ba_state` int(11) NOT NULL DEFAULT '' COMMENT '图书状态',
   `ba_price` double(10, 2) NULL DEFAULT NULL COMMENT '图书单价',
+  `ba_mprice` double(10, 2) NULL DEFAULT NULL COMMENT '图书市场价',
   PRIMARY KEY USING BTREE (`ba_id`),
   INDEX `type_attribute` USING BTREE(`bt_id`),
   CONSTRAINT `type_attribute` FOREIGN KEY (`bt_id`) REFERENCES `book_type` (`bt_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
@@ -62,9 +62,9 @@ CREATE TABLE `book_cart`  (
   PRIMARY KEY USING BTREE (`br_id`),
   INDEX `order_cart` USING BTREE(`bo_id`),
   INDEX `attribute_attribute` USING BTREE(`ba_id`),
-  CONSTRAINT `order_cart` FOREIGN KEY (`bo_id`) REFERENCES `book_order` (`bo_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  CONSTRAINT `attribute_attribute` FOREIGN KEY (`ba_id`) REFERENCES `book_attribute` (`ba_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 6144 kB; (`bo_id`) REFER `book/book_order`(`bo_id`); (`ba_id`) REFE' ROW_FORMAT = Compact;
+  CONSTRAINT `attribute_attribute` FOREIGN KEY (`ba_id`) REFERENCES `book_attribute` (`ba_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `order_cart` FOREIGN KEY (`bo_id`) REFERENCES `book_order` (`bo_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'InnoDB free: 6144 kB; (`ba_id`) REFER `book/book_attribute`(`ba_id`); (`bo_id`) ' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Table structure for book_comment
@@ -95,7 +95,7 @@ CREATE TABLE `book_consumer`  (
   `bc_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '真实姓名',
   `bc_sex` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '性别',
   `bc_telphone` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '联系方式',
-  `bc_adress` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户地址',
+  `bc_address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户地址',
   `bc_state` int(11) NOT NULL DEFAULT '' COMMENT '用户状态',
   PRIMARY KEY USING BTREE (`bc_id`)
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
