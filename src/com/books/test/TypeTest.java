@@ -11,7 +11,7 @@ import com.books.model.Type;
 
 /**
 * @ClassName: TypeTest
-* @Description: Type测试
+* @Description: Type测试用例
 * @author 李勇超
 * @date 2018年11月19日下午8:35:11
 *
