@@ -27,6 +27,9 @@ public class IndexServlet extends BaseServlet {
 		
 		//去数据库查找热门商品 将他们放到request域中 请求转发
 		
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		System.out.println(request.getParameter("password"));
+		
 		request.setAttribute("hello", "你好");
 		
 		HashMap<String, String> map=new HashMap<String,String>();
@@ -39,7 +42,11 @@ public class IndexServlet extends BaseServlet {
 		
 		request.setAttribute("jsonObject", jsonObject);
 		
-		return "/jsp/index.jsp";
+		response.setContentType("text/html;charset=utf-8");
+		response.getWriter().println(jsonObject);
+		
+		//return "/jsp/index.jsp";
+		return null;
 	}
 
 }
