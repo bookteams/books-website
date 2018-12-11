@@ -17,6 +17,16 @@ public class Consumer {
 	private String bcTelphone; //联系方式
 	private String bcAddress; //用户地址
 	private Integer bcState;   //用户状态
+	private String bcImage; //用户头像
+	
+	
+	
+	public String getBcImage() {
+		return bcImage;
+	}
+	public void setBcImage(String bcImage) {
+		this.bcImage = bcImage;
+	}
 	public Integer getBcId() {
 		return bcId;
 	}
