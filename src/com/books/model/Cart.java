@@ -10,8 +10,8 @@ package com.books.model;
 public class Cart {
 
 	private Integer brId;
-	private Integer boId; //订单号
-	private Integer baId; //图书编号
+	private Order order; //订单号
+	private Attribute attribute; //图书编号
 	private Integer brNum; //订购数量
 	private double brPrices; //总价格
 	public Integer getBrId() {
@@ -19,21 +19,6 @@ public class Cart {
 	}
 	public void setBrId(Integer brId) {
 		this.brId = brId;
-	}
-	public Integer getBoId() {
-		return boId;
-	}
-	public void setBoId(Integer boId) {
-		this.boId = boId;
-	}
-	public Integer getBaId() {
-		return baId;
-	}
-	public void setBaId(Integer baId) {
-		this.baId = baId;
-	}
-	public Integer getBrNum() {
-		return brNum;
 	}
 	public void setBrNum(Integer brNum) {
 		this.brNum = brNum;
@@ -44,5 +29,20 @@ public class Cart {
 	public void setBrPrices(double brPrices) {
 		this.brPrices = brPrices;
 	}
-	
+	public Order getOrder() {
+		return order;
+	}
+	public void setOrder(Order order) {
+		this.order = order;
+	}
+	public Attribute getAttribute() {
+		return attribute;
+	}
+	public void setAttribute(Attribute attribute) {
+		this.attribute = attribute;
+	}
+	public Integer getBrNum() {
+		return brNum;
+	}
+
 }

@@ -12,12 +12,13 @@ public class Attribute {
 	private Integer baId;  //图书编号
 	private String baName; //图书名称
 	private String baAutor; //作者
-	private Integer btId; //图书类型
+	private Type type; //图书类型
 	private Integer baStock; //库存量  
 	private String baIsbn; //图书书号
 	private String baIntroduction; //简介
 	private String bapicture; //图片
-	private Integer baState=0; //状态 0表示不是推荐 1表示推荐 
+	private Integer baState=0; //状态 0表示不是推荐 1表示推荐
+	private Integer baFlag=0; //是否下架 1表示下架 0表示有库存
 	private double baPrice; //图书单价
 	private double baMprice; //图书市场价
 	public Integer getBaId() {
@@ -37,12 +38,6 @@ public class Attribute {
 	}
 	public void setBaAutor(String baAutor) {
 		this.baAutor = baAutor;
-	}
-	public Integer getBtId() {
-		return btId;
-	}
-	public void setBtId(Integer btId) {
-		this.btId = btId;
 	}
 	public Integer getBaStock() {
 		return baStock;
@@ -86,9 +81,17 @@ public class Attribute {
 	public void setBaMprice(double baMprice) {
 		this.baMprice = baMprice;
 	}
+	public Type getType() {
+		return type;
+	}
+	public void setType(Type type) {
+		this.type = type;
+	}
+	public Integer getBaFlag() {
+		return baFlag;
+	}
+	public void setBaFlag(Integer baFlag) {
+		this.baFlag = baFlag;
+	}
 	
-	
-	
-	
-
 }

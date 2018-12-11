@@ -68,7 +68,7 @@ public class TypeDao {
 	public void deleteTypeById(Integer id) {
 
 		try {
-			ps = conn.prepareStatement("delete from book_type where bt_id='" + id + "'");
+			ps = conn.prepareStatement("delete from book_type where bt_id="+id);
 			ps.executeUpdate();
 			System.out.println(id + "É¾³ý³É¹¦£¡£¡£¡");
 		} catch (SQLException e) {
@@ -90,5 +90,27 @@ public class TypeDao {
 		}
 
 	}
+	
+	
+	public static void main(String[] args) {
+		TypeDao typeDao=new TypeDao();
+		
+		
+		//Type type=new Type();
+		//type.setBtId(btId);
+		//type.setBtName("¶ùÍ¯");
+		
+		//type.setBtId(4);
+		//type.setBtName("¶ùÍ¯Í¼Êé");
+		
+		//typeDao.insertType(type);
+		//typeDao.updateTypeById(type);
+		/*ArrayList<Type> allType = typeDao.getAllType();
+		for (Type type2 : allType) {
+			System.out.println(type2.getBtId()+","+type2.getBtName());
+		}*/
+		typeDao.deleteTypeById(4);
+	}
+		
 
 }

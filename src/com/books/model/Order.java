@@ -12,11 +12,11 @@ import java.util.Date;
 public class Order {
 	
 	private Integer boId;
-	private Integer bcId; 
+	private Consumer consumer; 
 	private Date boTime; //支付时间
 	private String boPay; //支付方式
 	private String boReName; //收货人姓名
-	private String boReAddr; //收货地址
+	private Address address; //收货地址
 	private String boReTel; //收货人联系方式
 	private Double boPrice; //总价格
 	private String boMemo; //备注
@@ -25,12 +25,6 @@ public class Order {
 	}
 	public void setBoId(Integer boId) {
 		this.boId = boId;
-	}
-	public Integer getBcId() {
-		return bcId;
-	}
-	public void setBcId(Integer bcId) {
-		this.bcId = bcId;
 	}
 	public Date getBoTime() {
 		return boTime;
@@ -50,12 +44,6 @@ public class Order {
 	public void setBoReName(String boReName) {
 		this.boReName = boReName;
 	}
-	public String getBoReAddr() {
-		return boReAddr;
-	}
-	public void setBoReAddr(String boReAddr) {
-		this.boReAddr = boReAddr;
-	}
 	public String getBoReTel() {
 		return boReTel;
 	}
@@ -73,6 +61,18 @@ public class Order {
 	}
 	public void setBoMemo(String boMemo) {
 		this.boMemo = boMemo;
+	}
+	public Consumer getConsumer() {
+		return consumer;
+	}
+	public void setConsumer(Consumer consumer) {
+		this.consumer = consumer;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 	
 }

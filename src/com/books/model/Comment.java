@@ -12,9 +12,8 @@ import java.util.Date;
 public class Comment {
 	
 	private Integer bmId;
-	private Integer baId;
-	private Integer bcId;
-	private String bcNickName; //用户昵称
+	private Attribute attribute;
+	private Consumer consumer; //bcId和用户昵称
 	private Date bmTime;  //评论时间
 	private String bmContent;  //评论内容
 	public Integer getBmId() {
@@ -22,24 +21,6 @@ public class Comment {
 	}
 	public void setBmId(Integer bmId) {
 		this.bmId = bmId;
-	}
-	public Integer getBaId() {
-		return baId;
-	}
-	public void setBaId(Integer baId) {
-		this.baId = baId;
-	}
-	public Integer getBcId() {
-		return bcId;
-	}
-	public void setBcId(Integer bcId) {
-		this.bcId = bcId;
-	}
-	public String getBcNickName() {
-		return bcNickName;
-	}
-	public void setBcNickName(String bcNickName) {
-		this.bcNickName = bcNickName;
 	}
 	public Date getBmTime() {
 		return bmTime;
@@ -53,8 +34,17 @@ public class Comment {
 	public void setBmContent(String bmContent) {
 		this.bmContent = bmContent;
 	}
+	public Attribute getAttribute() {
+		return attribute;
+	}
+	public void setAttribute(Attribute attribute) {
+		this.attribute = attribute;
+	}
+	public Consumer getConsumer() {
+		return consumer;
+	}
+	public void setConsumer(Consumer consumer) {
+		this.consumer = consumer;
+	}
 	
-	
-	
-
 }
