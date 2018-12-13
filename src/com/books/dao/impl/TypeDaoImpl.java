@@ -1,4 +1,4 @@
-package com.books.dao;
+package com.books.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,13 +13,13 @@ import com.books.model.Type;
 import com.books.util.C3P0Utils;
 
 /**
- * @ClassName: TypeDao
+ * @ClassName: TypeDaoImpl
  * @Description: 图书类别数据库操作
  * @author 李勇超
  * @date 2018年11月19日下午8:24:56
  *
  */
-public class TypeDao {
+public class TypeDaoImpl {
 
 	private Connection conn = C3P0Utils.getConnection(); // 获取数据库连接池
 	private Statement st;
@@ -93,7 +93,7 @@ public class TypeDao {
 	
 	
 	public static void main(String[] args) {
-		TypeDao typeDao=new TypeDao();
+		TypeDaoImpl typeDao=new TypeDaoImpl();
 		
 		
 		//Type type=new Type();
@@ -105,11 +105,11 @@ public class TypeDao {
 		
 		//typeDao.insertType(type);
 		//typeDao.updateTypeById(type);
-		/*ArrayList<Type> allType = typeDao.getAllType();
+		ArrayList<Type> allType = typeDao.getAllType();
 		for (Type type2 : allType) {
 			System.out.println(type2.getBtId()+","+type2.getBtName());
-		}*/
-		typeDao.deleteTypeById(4);
+		}
+		//typeDao.deleteTypeById(4);
 	}
 		
 

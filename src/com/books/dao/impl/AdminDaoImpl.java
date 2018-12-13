@@ -1,4 +1,4 @@
-package com.books.dao;
+package com.books.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,13 +9,13 @@ import com.books.model.Admin;
 import com.books.util.C3P0Utils;
 
 /**
-* @ClassName: AdminDao
+* @ClassName: AdminDaoImpl
 * @Description: 管理员数据库操作
 * @author 李勇超
 * @date 2018年11月19日下午8:40:59
 *
 */
-public class AdminDao {
+public class AdminDaoImpl {
 	
 	private Connection conn=C3P0Utils.getConnection();
 	private Statement st;

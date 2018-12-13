@@ -12,10 +12,28 @@ import java.util.Date;
 public class Comment {
 	
 	private Integer bmId;
-	private Attribute attribute;
-	private Consumer consumer; //bcId和用户昵称
+	private Integer baId;
+	private Integer bcId;
+	
 	private Date bmTime;  //评论时间
 	private String bmContent;  //评论内容
+	
+	private Attribute attribute;
+	private Consumer consumer; 
+	
+	
+	public Integer getBaId() {
+		return baId;
+	}
+	public void setBaId(Integer baId) {
+		this.baId = baId;
+	}
+	public Integer getBcId() {
+		return bcId;
+	}
+	public void setBcId(Integer bcId) {
+		this.bcId = bcId;
+	}
 	public Integer getBmId() {
 		return bmId;
 	}

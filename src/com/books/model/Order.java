@@ -12,7 +12,7 @@ import java.util.Date;
 public class Order {
 	
 	private Integer boId;
-	private Consumer consumer; 
+	private Integer bcId; //用户编号
 	private Date boTime; //支付时间
 	private String boPay; //支付方式
 	private String boReName; //收货人姓名
@@ -20,6 +20,16 @@ public class Order {
 	private String boReTel; //收货人联系方式
 	private Double boPrice; //总价格
 	private String boMemo; //备注
+	
+	private Consumer consumer;
+	
+	
+	public Integer getBcId() {
+		return bcId;
+	}
+	public void setBcId(Integer bcId) {
+		this.bcId = bcId;
+	}
 	public Integer getBoId() {
 		return boId;
 	}

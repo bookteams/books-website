@@ -10,8 +10,17 @@ package com.books.model;
 public class Address {
 	
 	private Integer bsId;
-	private Consumer consumer;
+	private Integer bcId;
 	private String bsAddress;   // ’ªıµÿ÷∑
+	
+	private Consumer consumer;
+	
+	public Integer getBcId() {
+		return bcId;
+	}
+	public void setBcId(Integer bcId) {
+		this.bcId = bcId;
+	}
 	public Integer getBsId() {
 		return bsId;
 	}

@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import com.books.dao.AdminDao;
-import com.books.dao.TypeDao;
+import com.books.dao.impl.AdminDaoImpl;
+import com.books.dao.impl.TypeDaoImpl;
 import com.books.model.Admin;
 import com.books.model.Type;
 import com.books.util.MD5Utils;
@@ -24,7 +24,7 @@ public class AdminTest {
     //查询所有
 	@Test
 	public void test() {
-		TypeDao dao=new TypeDao();
+		TypeDaoImpl dao=new TypeDaoImpl();
 		ArrayList<Type> aList=dao.getAllType();
 		for (Type type : aList) {
 			System.out.println(type.getBtId()+":"+type.getBtName());
@@ -36,7 +36,7 @@ public class AdminTest {
 	@Test
 	public void test1() {
 		String password="liyongchao";
-		AdminDao adminDao=new AdminDao();
+		AdminDaoImpl adminDao=new AdminDaoImpl();
 		Admin admin=new Admin();
 		admin.setBnName("admin1");
 		admin.setBnPassword(MD5Utils.md5(password));
@@ -46,7 +46,7 @@ public class AdminTest {
 	//通过id删除
 	@Test
 	public void test2() {
-		AdminDao dao=new AdminDao();
+		AdminDaoImpl dao=new AdminDaoImpl();
 		dao.deleteAdminById(2);
 		
 	}
@@ -54,7 +54,7 @@ public class AdminTest {
 	@Test
 	public void test3() {
 		
-		AdminDao adminDao=new AdminDao();
+		AdminDaoImpl adminDao=new AdminDaoImpl();
 		Admin admin=new Admin();
 		admin.setBnId(1);
 		admin.setBnName("admin");

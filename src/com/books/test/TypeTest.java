@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import com.books.dao.TypeDao;
+import com.books.dao.impl.TypeDaoImpl;
 import com.books.model.Type;
 
 /**
@@ -20,7 +20,7 @@ public class TypeTest {
     //查询所有
 	@Test
 	public void test() {
-		TypeDao dao=new TypeDao();
+		TypeDaoImpl dao=new TypeDaoImpl();
 		ArrayList<Type> aList=dao.getAllType();
 		for (Type type : aList) {
 			System.out.println(type.getBtId()+":"+type.getBtName());
@@ -31,7 +31,7 @@ public class TypeTest {
 	//添加
 	@Test
 	public void test1() {
-		TypeDao dao=new TypeDao();
+		TypeDaoImpl dao=new TypeDaoImpl();
 		Type type=new Type();
 		type.setBtName("小说");
 		dao.insertType(type);
@@ -40,14 +40,14 @@ public class TypeTest {
 	//通过id删除
 	@Test
 	public void test2() {
-		TypeDao dao=new TypeDao();
+		TypeDaoImpl dao=new TypeDaoImpl();
 		dao.deleteTypeById(4);
 		
 	}
 	//通过id修改
 	@Test
 	public void test3() {
-		TypeDao dao=new TypeDao();
+		TypeDaoImpl dao=new TypeDaoImpl();
 		Type type=new Type();
 		type.setBtId(3);
 		type.setBtName("幼儿教育");
