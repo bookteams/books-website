@@ -14,6 +14,7 @@ public class Comment {
 	private Integer bmId;
 	private Integer baId;
 	private Integer bcId;
+	private String bcNickName;
 	
 	private Date bmTime;  //评论时间
 	private String bmContent;  //评论内容
@@ -22,6 +23,13 @@ public class Comment {
 	private Consumer consumer; 
 	
 	
+	
+	public String getBcNickName() {
+		return bcNickName;
+	}
+	public void setBcNickName(String bcNickName) {
+		this.bcNickName = bcNickName;
+	}
 	public Integer getBaId() {
 		return baId;
 	}

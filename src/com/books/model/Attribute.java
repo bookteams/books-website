@@ -1,5 +1,7 @@
 package com.books.model;
 
+import java.math.BigDecimal;
+
 /**
 * @ClassName: Attribute
 * @Description: 图书
@@ -19,8 +21,8 @@ public class Attribute {
 	private String bapicture; //图片
 	private Integer baState=0; //状态 0表示不是推荐 1表示推荐
 	private Integer baFlag=0; //是否下架 1表示下架 0表示有库存
-	private double baPrice; //图书单价
-	private double baMprice; //图书市场价
+	private BigDecimal baPrice; //图书单价
+	private BigDecimal baMprice; //图书市场价
 	
 	private Type type;
 	
@@ -78,16 +80,16 @@ public class Attribute {
 	public void setBaState(Integer baState) {
 		this.baState = baState;
 	}
-	public double getBaPrice() {
+	public BigDecimal getBaPrice() {
 		return baPrice;
 	}
-	public void setBaPrice(double baPrice) {
+	public void setBaPrice(BigDecimal baPrice) {
 		this.baPrice = baPrice;
 	}
-	public double getBaMprice() {
+	public BigDecimal getBaMprice() {
 		return baMprice;
 	}
-	public void setBaMprice(double baMprice) {
+	public void setBaMprice(BigDecimal baMprice) {
 		this.baMprice = baMprice;
 	}
 	public Type getType() {
