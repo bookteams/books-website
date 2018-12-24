@@ -2,12 +2,17 @@
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.books.model.Attribute;
+import com.books.service.AttributeService;
+import com.books.service.impl.AttributeServiceImpl;
 
 import net.sf.json.JSONObject;
 
@@ -22,6 +27,8 @@ import net.sf.json.JSONObject;
 @WebServlet("/index")
 public class IndexServlet extends BaseServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private AttributeService attributeService=new AttributeServiceImpl();
        
 	public String index(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -30,22 +37,16 @@ public class IndexServlet extends BaseServlet {
 		response.setHeader("Access-Control-Allow-Origin", "*");
 		System.out.println(request.getParameter("password"));
 		
-		request.setAttribute("hello", "ÄãºÃ");
-		
-		HashMap<String, String> map=new HashMap<String,String>();
-		map.put("user", "user");
-		map.put("list","list");
-		
+		List<Attribute> selectAttributeAll = attributeService.selectAttributeAll();
+		System.out.println(selectAttributeAll);
+		HashMap<String, Attribute> map=new HashMap<String,Attribute>();
+		for (Attribute attribute : selectAttributeAll) {
+			map.put(String.valueOf(attribute.getBaId()), attribute);
+		}
 		JSONObject jsonObject=JSONObject.fromObject(map);
-		
+		response.getWriter().println(jsonObject);
 		System.out.println(jsonObject);
 		
-		request.setAttribute("jsonObject", jsonObject);
-		
-		response.setContentType("text/html;charset=utf-8");
-		response.getWriter().println(jsonObject);
-		
-		//return "/jsp/index.jsp";
 		return null;
 	}
 

@@ -17,10 +17,10 @@ public interface ConsumerService {
 	public List<Consumer> selectConsumerAll();
 	
 	//增加
-	public int insertConsumer(Consumer consumer);
+	public int insertConsumer(Integer bcId,String bcNickName,String bcPassword,String bcName,String bcSex,String bcTelphone,String bcAddress,Integer bcState,String bcImage);
 	
 	//通过bcId修改
-	public int updateConsumerBybcId(Consumer consumer);
+	public int updateConsumerBybcId(Integer bcId,String bcNickname,String bcPassword,String bcName,String bcSex,String bcTelphone,String bcAddress,Integer bcState,String bcImage);
 	
 	//通过bcId删除
 	public int deleteConsumerBybcId(Integer bcId);

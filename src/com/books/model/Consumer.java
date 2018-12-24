@@ -10,10 +10,10 @@ package com.books.model;
 public class Consumer {
 	
 	private Integer bcId;
-	private String bcNickName; //昵称
+	private String bcNickname; //昵称
 	private String bcPassword; //密码
 	private String bcName; //真实姓名
-	private Integer bcSex;   //性别
+	private String bcSex;   //性别
 	private String bcTelphone; //联系方式
 	private String bcAddress; //用户地址
 	private Integer bcState;   //用户状态
@@ -34,10 +34,10 @@ public class Consumer {
 		this.bcId = bcId;
 	}
 	public String getBcNickName() {
-		return bcNickName;
+		return bcNickname;
 	}
 	public void setBcNickName(String bcNickName) {
-		this.bcNickName = bcNickName;
+		this.bcNickname = bcNickName;
 	}
 	public String getBcPassword() {
 		return bcPassword;
@@ -51,10 +51,10 @@ public class Consumer {
 	public void setBcName(String bcName) {
 		this.bcName = bcName;
 	}
-	public Integer getBcSex() {
+	public String getBcSex() {
 		return bcSex;
 	}
-	public void setBcSex(Integer bcSex) {
+	public void setBcSex(String bcSex) {
 		this.bcSex = bcSex;
 	}
 	public String getBcTelphone() {

@@ -1,5 +1,7 @@
 package com.books.service.impl;
 
+import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 import com.books.dao.OrderDao;
@@ -24,12 +26,34 @@ public class OrderServiceImpl implements OrderService{
 	}
 
 	@Override
-	public int insertOrder(Order order) {
+	public int insertOrder(Integer boId,Integer bcId,Date boTime,String boPay,String boRename,String boReaddr,String boReTel,
+			BigDecimal boPrice,String boMemo) {
+		Order order=new Order();
+		order.setBoId(boId);
+		order.setBcId(bcId);
+		order.setBoTime(boTime);
+		order.setBoPay(boPay);
+		order.setBoRename(boRename);
+		order.setBoReaddr(boReaddr);
+		order.setBoReTel(boReTel);
+		order.setBoPrice(boPrice);
+		order.setBoMemo(boMemo);
 		return orderDao.insertOrder(order);
 	}
 
 	@Override
-	public int updateOrderByboId(Order order) {
+	public int updateOrderByboId(Integer boId,Integer bcId,Date boTime,String boPay,String boRename,String boReaddr,String boReTel,
+			BigDecimal boPrice,String boMemo) {
+		Order order=new Order();
+		order.setBoId(boId);
+		order.setBcId(bcId);
+		order.setBoTime(boTime);
+		order.setBoPay(boPay);
+		order.setBoRename(boRename);
+		order.setBoReaddr(boReaddr);
+		order.setBoReTel(boReTel);
+		order.setBoPrice(boPrice);
+		order.setBoMemo(boMemo);
 		return orderDao.updateOrderByboId(order);
 	}
 

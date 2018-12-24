@@ -1,5 +1,6 @@
 package com.books.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -15,15 +16,28 @@ public class Order {
 	private Integer bcId; //用户编号
 	private Date boTime; //支付时间
 	private String boPay; //支付方式
-	private String boReName; //收货人姓名
-	private Address address; //收货地址
+	private String boRename; //收货人姓名
+	private String boReaddr; //收货地址
 	private String boReTel; //收货人联系方式
-	private Double boPrice; //总价格
+	private BigDecimal boPrice; //总价格
 	private String boMemo; //备注
 	
 	private Consumer consumer;
+	private Address address;
 	
 	
+	public String getBoRename() {
+		return boRename;
+	}
+	public void setBoRename(String boRename) {
+		this.boRename = boRename;
+	}
+	public String getBoReaddr() {
+		return boReaddr;
+	}
+	public void setBoReaddr(String boReaddr) {
+		this.boReaddr = boReaddr;
+	}
 	public Integer getBcId() {
 		return bcId;
 	}
@@ -48,22 +62,16 @@ public class Order {
 	public void setBoPay(String boPay) {
 		this.boPay = boPay;
 	}
-	public String getBoReName() {
-		return boReName;
-	}
-	public void setBoReName(String boReName) {
-		this.boReName = boReName;
-	}
 	public String getBoReTel() {
 		return boReTel;
 	}
 	public void setBoReTel(String boReTel) {
 		this.boReTel = boReTel;
 	}
-	public Double getBoPrice() {
+	public BigDecimal getBoPrice() {
 		return boPrice;
 	}
-	public void setBoPrice(Double boPrice) {
+	public void setBoPrice(BigDecimal boPrice) {
 		this.boPrice = boPrice;
 	}
 	public String getBoMemo() {
