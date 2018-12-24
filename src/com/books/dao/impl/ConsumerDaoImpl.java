@@ -3,6 +3,7 @@ package com.books.dao.impl;
 import java.util.List;
 
 import com.books.dao.ConsumerDao;
+import com.books.model.Admin;
 import com.books.model.Consumer;
 import com.books.util.SqlHelper;
 
@@ -39,5 +40,10 @@ public class ConsumerDaoImpl implements ConsumerDao {
 		return SqlHelper.executeNoQuery("delete * from book_consumer where bcId="+bcId);
 	}
 	
+	//通过bcNickName和bcPassword进行登录
+	 @Override
+	public Consumer loginConsumer(String bcNickName,String bcPassword) {
+		return  SqlHelper.executeQueryOne(Consumer.class, "select * from book_consumer where bcNickName='"+bcNickName+"' and bcPassword='"+bcPassword+"'");
+	}
 	
 }

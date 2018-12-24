@@ -24,4 +24,7 @@ public interface ConsumerService {
 	
 	//通过bcId删除
 	public int deleteConsumerBybcId(Integer bcId);
+	
+	//通过bcNickName和bcPassword进行登录
+	public Consumer loginConsumer(String bcNickName,String bcPassword);
 }

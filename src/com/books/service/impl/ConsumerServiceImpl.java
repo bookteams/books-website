@@ -6,6 +6,7 @@ import com.books.dao.ConsumerDao;
 import com.books.dao.impl.ConsumerDaoImpl;
 import com.books.model.Consumer;
 import com.books.service.ConsumerService;
+import com.books.util.MD5Utils;
 
 /**
 * @ClassName: ConsumerServiceImpl
@@ -36,6 +37,12 @@ public class ConsumerServiceImpl implements ConsumerService{
 	@Override
 	public int deleteConsumerBybcId(Integer bcId) {
 		return consumerDao.deleteConsumerBybcId(bcId);
+	}
+
+	@Override
+	public Consumer loginConsumer(String bcNickName, String bcPassword) {
+		String bcPassword1=MD5Utils.md5(bcPassword); 
+		return consumerDao.loginConsumer(bcNickName, bcPassword1);
 	}
 
 }
