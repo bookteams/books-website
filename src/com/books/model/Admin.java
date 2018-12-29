@@ -13,6 +13,14 @@ public class Admin {
 	private String bnName;  //’À∫≈
 	private String bnPassword; //√‹¬Î
 	
+	public Admin() {}
+	
+	public Admin(Integer bnId, String bnName, String bnPassword) {
+		super();
+		this.bnId = bnId;
+		this.bnName = bnName;
+		this.bnPassword = bnPassword;
+	}
 	public Integer getBnId() {
 		return bnId;
 	}

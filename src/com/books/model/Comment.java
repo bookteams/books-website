@@ -22,8 +22,17 @@ public class Comment {
 	private Attribute attribute;
 	private Consumer consumer; 
 	
+	public Comment() { }
 	
-	
+	public Comment(Integer bmId, Integer baId, Integer bcId, String bcNickName, Date bmTime, String bmContent) {
+		super();
+		this.bmId = bmId;
+		this.baId = baId;
+		this.bcId = bcId;
+		this.bcNickName = bcNickName;
+		this.bmTime = bmTime;
+		this.bmContent = bmContent;
+	}
 	public String getBcNickName() {
 		return bcNickName;
 	}

@@ -27,32 +27,16 @@ public class ConsumerServiceImpl implements ConsumerService{
 	@Override
 	public int insertConsumer(Integer bcId,String bcNickname,String bcPassword,String bcName,String bcSex,
 			String bcTelphone,String bcAddress,Integer bcState,String bcImage) {
-		Consumer consumer=new Consumer();
-		consumer.setBcId(bcId);
-		consumer.setBcNickName(bcNickname);
-		consumer.setBcPassword(MD5Utils.md5(bcPassword));
-		consumer.setBcName(bcName);
-		consumer.setBcSex(bcSex);
-		consumer.setBcTelphone(bcTelphone);
-		consumer.setBcAddress(bcAddress);
-		consumer.setBcState(bcState);
-		consumer.setBcImage(bcImage);
+		Consumer consumer=new Consumer(bcId,bcNickname,MD5Utils.md5(bcPassword),bcName,bcSex,
+				bcTelphone,bcAddress,bcState,bcImage);
 		return consumerDao.insertConsumer(consumer);
 	}
 
 	@Override
-	public int updateConsumerBybcId(Integer bcId,String bcNickName,String bcPassword,String bcName,String bcSex,
+	public int updateConsumerBybcId(Integer bcId,String bcNickname,String bcPassword,String bcName,String bcSex,
 			String bcTelphone,String bcAddress,Integer bcState,String bcImage) {
-		Consumer consumer=new Consumer();
-		consumer.setBcId(bcId);
-		consumer.setBcNickName(bcNickName);
-		consumer.setBcPassword(MD5Utils.md5(bcPassword));
-		consumer.setBcName(bcName);
-		consumer.setBcSex(bcSex);
-		consumer.setBcTelphone(bcTelphone);
-		consumer.setBcAddress(bcAddress);
-		consumer.setBcState(bcState);
-		consumer.setBcImage(bcImage);
+		Consumer consumer=new Consumer(bcId,bcNickname,MD5Utils.md5(bcPassword),bcName,bcSex,
+				bcTelphone,bcAddress,bcState,bcImage);
 		return consumerDao.updateConsumerBybcId(consumer);
 	}
 

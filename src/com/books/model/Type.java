@@ -12,6 +12,14 @@ public class Type {
 	
 	private Integer btId;
 	private String btName;
+	
+	public Type() {}
+	
+	public Type(Integer btId, String btName) {
+		super();
+		this.btId = btId;
+		this.btName = btName;
+	}
 	public Integer getBtId() {
 		return btId;
 	}

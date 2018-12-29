@@ -26,6 +26,25 @@ public class Attribute {
 	
 	private Type type;
 	
+	public Attribute() {}
+	
+	public Attribute(Integer baId, String baName, String baAutor, Integer btId, Integer baStock, String baIsbn,
+			String baIntroduction, String bapicture, Integer baState, Integer baFlag, BigDecimal baPrice,
+			BigDecimal baMprice) {
+		super();
+		this.baId = baId;
+		this.baName = baName;
+		this.baAutor = baAutor;
+		this.btId = btId;
+		this.baStock = baStock;
+		this.baIsbn = baIsbn;
+		this.baIntroduction = baIntroduction;
+		this.bapicture = bapicture;
+		this.baState = baState;
+		this.baFlag = baFlag;
+		this.baPrice = baPrice;
+		this.baMprice = baMprice;
+	}
 	public Integer getBtId() {
 		return btId;
 	}

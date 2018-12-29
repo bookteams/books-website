@@ -15,7 +15,18 @@ public class Cart {
 	private Integer brNum; //订购数量
 	private double brPrices; //总价格
 	
-	private Order order; 
+	private Order order;
+	
+	public Cart() {}
+	
+	public Cart(Integer brId, Integer boId, Integer baId, Integer brNum, double brPrices) {
+		super();
+		this.brId = brId;
+		this.boId = boId;
+		this.baId = baId;
+		this.brNum = brNum;
+		this.brPrices = brPrices;
+	}
 	public Integer getBoId() {
 		return boId;
 	}

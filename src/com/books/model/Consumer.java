@@ -19,8 +19,21 @@ public class Consumer {
 	private Integer bcState;   //用户状态
 	private String bcImage; //用户头像
 	
+	public Consumer() {}
 	
-	
+	public Consumer(Integer bcId, String bcNickname, String bcPassword, String bcName, String bcSex, String bcTelphone,
+			String bcAddress, Integer bcState, String bcImage) {
+		super();
+		this.bcId = bcId;
+		this.bcNickname = bcNickname;
+		this.bcPassword = bcPassword;
+		this.bcName = bcName;
+		this.bcSex = bcSex;
+		this.bcTelphone = bcTelphone;
+		this.bcAddress = bcAddress;
+		this.bcState = bcState;
+		this.bcImage = bcImage;
+	}
 	public String getBcImage() {
 		return bcImage;
 	}

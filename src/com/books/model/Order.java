@@ -25,7 +25,21 @@ public class Order {
 	private Consumer consumer;
 	private Address address;
 	
+	public Order() {}
 	
+	public Order(Integer boId, Integer bcId, Date boTime, String boPay, String boRename, String boReaddr,
+			String boReTel, BigDecimal boPrice, String boMemo) {
+		super();
+		this.boId = boId;
+		this.bcId = bcId;
+		this.boTime = boTime;
+		this.boPay = boPay;
+		this.boRename = boRename;
+		this.boReaddr = boReaddr;
+		this.boReTel = boReTel;
+		this.boPrice = boPrice;
+		this.boMemo = boMemo;
+	}
 	public String getBoRename() {
 		return boRename;
 	}

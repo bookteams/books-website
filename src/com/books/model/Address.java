@@ -15,6 +15,14 @@ public class Address {
 	
 	private Consumer consumer;
 	
+	public Address() {}
+	
+	public Address(Integer bsId, Integer bcId, String bsAddress) {
+		super();
+		this.bsId = bsId;
+		this.bcId = bcId;
+		this.bsAddress = bsAddress;
+	}
 	public Integer getBcId() {
 		return bcId;
 	}
